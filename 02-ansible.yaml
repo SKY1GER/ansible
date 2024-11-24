@@ -1,13 +1,13 @@
--name: install and run nginx
- hosts: web
- beconme: yes #to become root access
- tasks: 
-  -name: install nginx
-   ansible.package.dnf
-    -name: nginx
-     state: latest
-  -name: run nginx
-   ansible.package.service
-    -name: nginx
-     state: started
-     enable: yes
+- name: install and run nginx
+  hosts: web
+  beconme: yes #to become root access
+  tasks: 
+  - name: install nginx
+    ansible.package.dnf
+     - name: nginx
+       state: latest
+  - name: run nginx
+    ansible.package.service
+    - name: nginx
+      state: started
+      enable: yes
