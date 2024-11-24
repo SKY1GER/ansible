@@ -1,6 +1,6 @@
 - name: install and run nginx
   hosts: web
-  beconme: yes #to become root access
+  become: yes #to become root access
   tasks: 
   - name: install nginx
     ansible.package.dnf:
