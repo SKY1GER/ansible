@@ -3,11 +3,11 @@
   become: yes #to become root access
   tasks: 
   - name: install nginx
-    ansible.package.dnf:
+    ansible.builtin.dnf:
       name: nginx
       state: latest
   - name: run nginx
-    ansible.package.service:
+    ansible.builtin.service:
       name: nginx
       state: started
       enable: yes
