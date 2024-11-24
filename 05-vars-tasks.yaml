@@ -12,5 +12,6 @@
         Duration: "180 min"
       ansible.builtin.debug:
         msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
-  ansible.builtin.debug:
-    msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
+  tasks:      
+    ansible.builtin.debug:
+      msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
