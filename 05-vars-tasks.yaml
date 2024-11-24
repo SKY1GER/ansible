@@ -5,13 +5,13 @@
     Tainer: "SivaKumar"
     Duration: "120 min"
   tasks:
-    - name: to print message with predefined variables
+    - name: to print override information
       vars:
         Course: "Ansible_advanced"
         Tainer: "SaiKumar"
         Duration: "180 min"
       ansible.builtin.debug:
         msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
-  tasks:      
-    ansible.builtin.debug:
-      msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
+    - name: to print message with predefined variables    
+      ansible.builtin.debug:
+        msg: "I am learning {{Course}} from {{Tainer}} for duration {{Duration}}"
