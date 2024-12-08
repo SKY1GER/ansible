@@ -48,16 +48,17 @@
   tasks:
   - name: to convert into items
     ansible.builtin.debug:
+      msg: "before converting my_dict {{ my_dist }} "
       msg: "items are: {{ my_dict | dict2items }}"
 
-- name: to convert items2dict
-  hosts: localhost
-  vars:
-    my_list:
-    - Course: Devops
-    - Duration: 120min
-    - Trainer: Shiva
-  tasks:
-  - name: to convert into items
-    ansible.builtin.debug:
-      msg: "my_list is: {{ my_list | items2dict }}"
+# - name: to convert items2dict
+#   hosts: localhost
+#   vars:
+#     my_list:
+#     - Course: Devops
+#     - Duration: 120min
+#     - Trainer: Shiva
+#   tasks:
+#   - name: to convert into items
+#     ansible.builtin.debug:
+#       msg: "my_list is: {{ my_list | items2dict }}"
