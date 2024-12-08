@@ -3,9 +3,9 @@
   vars:
    Course: Devops with aws
   Tools:
-  - linux
-  - jenkins
-  - Shell
+   - linux
+   - jenkins
+   - Shell
   Experience:
     Devops: 3
     shell: 2
