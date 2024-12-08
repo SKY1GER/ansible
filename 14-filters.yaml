@@ -1,0 +1,61 @@
+- name: to print default values
+  hosts: localhost
+  tasks:
+  - name: to print default values
+    ansible.buitin.debug:
+      msg: "{{ Course | default('All the best') }}"
+
+- name: to convert to Uppercase or lowercase
+  hosts: localhost
+  vars:
+    Wishes: Good Morning
+  tasks:
+  - name: to convert to uppercase
+    ansible.builtin.debug:
+      msg: "{{ Wishes | upper }}"
+  - name: to convert to lowecase
+    ansible.builtin.debug:
+      msg: "{{ Wishes | lower }}"
+
+- name: to remove duplicates
+  hosts: localhost
+  vars:
+    numbers: [13,13,13,12,11,11,10,10,9,8]
+  tasks:
+  - name: to remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}" 
+
+- name: to findout max/min
+  hosts: localhost
+  vars:
+    Values: [1,12,13,14,0,15,16,8,30]
+  tasks:
+  - name: to findout max
+    ansible.builtin.debug:
+      msg: "{{ Values | max }}"
+  - name : to findout min
+    ansible.builtin.debug:
+      msg: "{{ Values | min }}"
+
+- name: to convert dict2items/viceversa
+  hosts: localhost
+  my_dict:
+    Course: Devops
+    Duration: 120min
+    Trainer: Shiva
+  tasks:
+  - name: to convert into items
+    ansible.builtin.debug:
+      msg: "items are: {{ my_dict | dict2items }}"
+
+- name: to convert items2dict
+  hosts: localhost
+  my_list:
+  -  Course: Devops
+  -  Duration: 120min
+  - Trainer: Shiva
+  tasks:
+  - name: to convert into items
+    ansible.builtin.debug:
+      msg: "my_dict is: {{ my_list | items2dict }}"
