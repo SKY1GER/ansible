@@ -15,6 +15,6 @@
     when: number | int < 10
   - name: to write a conditio to check the number is equal to 10
     ansible.builtin.debug:
-      msg: "{{number}} is greater than 10"
+      msg: "{{number}} is equal to 10"
     when: number | int == 10
    
