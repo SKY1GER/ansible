@@ -1,0 +1,16 @@
+- name: Variables preference
+  hosts: local host
+  vars:
+   Wishes: "Input from vars is Everning"
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: Wishes
+    prompt: please enter wishes
+    private: false
+  tasks:
+    - name: variable preference
+      vars:
+        Wishes: "Input from task level vars is Everning"
+      ansible.builtin.debug:
+        msg: "Hi Sai, Good {{Wishes}}"
