@@ -53,14 +53,17 @@
     ansible.builtin.debug:
       msg: "after coverting into items: {{ my_dict | dict2items }}"
 
-# - name: to convert items2dict
-#   hosts: localhost
-#   vars:
-#     my_list:
-#     - Course: Devops
-#     - Duration: 120min
-#     - Trainer: Shiva
-#   tasks:
-#   - name: to convert into items
-#     ansible.builtin.debug:
-#       msg: "my_list is: {{ my_list | items2dict }}"
+- name: to convert items2dict
+  hosts: localhost
+  vars:
+    my_list:
+    - Course: Devops
+    - Duration: 120min
+    - Trainer: Shiva
+  tasks:
+  - name: before converting into dictionary
+    ansible.builtin.debug:
+      msg: "before converting my_list: {{ my_list }}"
+  - name: to convert into items   
+    ansible.builtin.debug:
+      msg: "after coverting into items: {{ my_list | items2dict }}"
