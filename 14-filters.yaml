@@ -66,4 +66,4 @@
       msg: "before converting my_list: {{ my_list }}"
   - name: to convert into items   
     ansible.builtin.debug:
-      msg: "after coverting into items: {{ my_list | items2dict }}"
+      msg: "after coverting into dict: {{ my_list | items2dict }}"
