@@ -9,4 +9,10 @@
     - name: to print the value of user
       ansible.builtin.debug:
         msg: "user is {{USER}}"
+    - name: to add user if not exists
+      ansible.builtin.command: useradd USER
+      when: USER.rc != 0
+
+        
+        
 
