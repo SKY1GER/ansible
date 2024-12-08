@@ -1,5 +1,5 @@
 - name: practice variables
-  host: localhost
+  hosts: localhost
   vars:
     name: "Sai Kumar"
     Hobbie: "Cricket"
