@@ -1,0 +1,17 @@
+- name: practice variables
+  host: localhost
+  vars:
+    name: "Sai Kumar"
+    Hobbie: "Cricket"
+    Duration: "120 min"
+  tasks:
+    - name: "to print overide message"
+      vars:
+        name: "Kalyan Kumar"
+        Hobbie: "Vollyball"
+        Duration: "60 min"
+      ansible.builtin.debug:
+        msg: "{{name}} plays {{Hobbie}} everyday"  
+    - name: "to print exsting information"
+      ansible.builtin.debug:
+        msg: "{{name}} plays {{Hobbie}} everyday" 
