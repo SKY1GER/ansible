@@ -46,9 +46,10 @@
       Duration: 120min
       Trainer: Shiva
   tasks:
-  - name: to convert into items
+  - name: before converting into items
     ansible.builtin.debug:
-      msg: "before converting my_dict: {{ my_dict }} "
+      msg: "before converting my_dict: {{ my_dict }}"
+  - name: to convert into items   
     ansible.builtin.debug:
       msg: "after coverting into items: {{ my_dict | dict2items }}"
 
