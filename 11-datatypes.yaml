@@ -10,7 +10,7 @@
       Devops: 3
       shell: 2
       python: 1
-  Realproject: True
+    Realproject: True
   tasks:
   - name: print variables
     ansible.builtin.debug:
