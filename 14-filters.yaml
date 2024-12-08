@@ -60,4 +60,4 @@
   tasks:
   - name: to convert into items
     ansible.builtin.debug:
-      msg: "my_dict is: {{ my_list | items2dict }}"
+      msg: "my_list is: {{ my_list | items2dict }}"
