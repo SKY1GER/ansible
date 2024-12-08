@@ -54,8 +54,8 @@
   hosts: localhost
   vars:
     my_list:
-    -  Course: Devops
-    -  Duration: 120min
+    - Course: Devops
+    - Duration: 120min
     - Trainer: Shiva
   tasks:
   - name: to convert into items
