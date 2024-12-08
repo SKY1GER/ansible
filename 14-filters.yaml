@@ -40,10 +40,11 @@
 
 - name: to convert dict2items/viceversa
   hosts: localhost
-  my_dict:
-    Course: Devops
-    Duration: 120min
-    Trainer: Shiva
+  vars:
+    my_dict:
+      Course: Devops
+      Duration: 120min
+      Trainer: Shiva
   tasks:
   - name: to convert into items
     ansible.builtin.debug:
@@ -51,10 +52,11 @@
 
 - name: to convert items2dict
   hosts: localhost
-  my_list:
-  -  Course: Devops
-  -  Duration: 120min
-  - Trainer: Shiva
+  vars:
+    my_list:
+    -  Course: Devops
+    -  Duration: 120min
+    - Trainer: Shiva
   tasks:
   - name: to convert into items
     ansible.builtin.debug:
