@@ -49,7 +49,7 @@
   - name: to convert into items
     ansible.builtin.debug:
       msg: "before converting my_dict {{ my_dist }} "
-      msg: "items are: {{ my_dict | dict2items }}"
+      #msg: "items are: {{ my_dict | dict2items }}"
 
 # - name: to convert items2dict
 #   hosts: localhost
