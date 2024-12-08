@@ -1,5 +1,5 @@
 - name: Variables preference
-  hosts: local host
+  hosts: localhost
   vars:
    Wishes: "Input from vars is Everning"
   vars_files:
