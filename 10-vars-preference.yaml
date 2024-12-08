@@ -14,3 +14,11 @@
       #   Wishes: "Input from task level vars is Evening"
       ansible.builtin.debug:
         msg: "Hi Sai, Good {{Wishes}}"
+
+# First priority is argument variables
+# Second priority is task level Varibles
+# Third priority is Varibles from file
+# Fourth priority is Varibles from prompts
+# Fifth priority is Varibles from play level
+# Sixth priority is Varibles inventort
+# last is Role lvel

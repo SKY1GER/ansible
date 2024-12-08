@@ -1,0 +1,17 @@
+- name: Data Types
+  hosts: localhost
+  vars:
+   Course: Devops with aws
+  Tools:
+  - linux
+  - jenkins
+  - Shell
+  Experience:
+    Devops: 3
+    shell: 2
+    python: 1
+  Realproject: True
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+     msg: "Varible is {{vars}}, Tools is {{Tools}}, Experience is {{Experience}}, Realtimeproject is realtime {{Realproject}}"
