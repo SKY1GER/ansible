@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
   - name: to print default values
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "{{ Course | default('All the best') }}"
 
 - name: to convert to Uppercase or lowercase
