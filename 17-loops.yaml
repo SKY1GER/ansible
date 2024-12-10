@@ -1,0 +1,12 @@
+- name: to install/remove pacakges
+  hosts: web
+  become: yes
+  tasks:
+  - name: to install/remove pacakges
+    ansible.builtin.dnf:
+      name: {{item.name}}
+      state: {{item.state}}
+    loop:
+    - {{ "name":"nginx", "state":"latest" }}
+      {{ "name":"mysql", "state":"absent" }}
+      {{ "name":"postfix", "state":"absent" }}
