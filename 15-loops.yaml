@@ -1,0 +1,11 @@
+- name: demo on loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: to print list using loop
+    ansible.builtin.debug:
+      msg: "Course includes {{item}}"
+    loop:
+    - linux
+    - jenkins
+    - shell
